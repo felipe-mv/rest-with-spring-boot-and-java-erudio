@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -53,7 +52,7 @@ public class PersonController {
 		return service.findAll();
 	}
 	
-	@CrossOrigin(origins = "http://localhost:8080")
+//	@CrossOrigin(origins = "http://localhost:8080")
 	@GetMapping(value = "/{id}",
 			produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
 	@Operation(summary  = "Finds a Person", description = "Finds a Person",
@@ -72,7 +71,7 @@ public class PersonController {
 		return service.findById(id);
 	}
 	
-	@CrossOrigin(origins = {"http://localhost:8080", "http://erudio.com.br"})
+//	@CrossOrigin(origins = {"http://localhost:8080", "http://erudio.com.br"})
 	@PostMapping(consumes = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML},
 			produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
 	@Operation(summary  = "Adds a new Person", description = "Adds a new Person by passing in a aJSON, XML or YML",
