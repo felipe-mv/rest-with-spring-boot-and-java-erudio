@@ -23,6 +23,8 @@ public class BooksVO extends RepresentationModel<BooksVO> implements Serializabl
 	private double price;	
 	private String title;
 	
+	public BooksVO() {}
+	
 	public Long getKey() {
 		return key;
 	}

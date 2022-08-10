@@ -1,7 +1,10 @@
-package br.com.innmanager.data.vo.v1.security;
+package br.com.innmanager.integrationtests.vo;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class AccountCredentialsVO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
